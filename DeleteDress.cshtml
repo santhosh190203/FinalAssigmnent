@@ -1,0 +1,56 @@
+﻿@model BoutiqueShop.DressClass
+
+@{
+    ViewBag.Title = "DeleteDress";
+}
+
+<h2>DeleteDress</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DressClass</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DressId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DressId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DressName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DressName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DressType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DressType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dressprice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dressprice)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "GetDresses")
+        </div>
+    }
+</div>
